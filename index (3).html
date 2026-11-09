@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arcoíris Ceremoniales en Meta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#ECEEEA;--ink:#1F2A24;--mute:#5C675F;--line:#CBD1C9;--sage:#A9B8A5;--blush:#E3D2CB;--paper:#F8F9F6;
+--serif:"Instrument Serif",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141A16;--ink:#E8ECE6;--mute:#9AA59C;--line:#2C362F;--sage:#4C5E4B;--blush:#4A3B36;--paper:#1B221D;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141A16;--ink:#E8ECE6;--mute:#9AA59C;--line:#2C362F;--sage:#4C5E4B;--blush:#4A3B36;--paper:#1B221D;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans)}
+img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(28px,env(safe-area-inset-right,0px)) 0 max(28px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--mute)}
+p{margin:0}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.logo{font:400 26px var(--serif)}
+header span{font-size:15px;color:var(--mute)}
+.tag{font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;padding:8px 0 96px}
+h1{font-size:clamp(44px,6.4vw,88px);line-height:1}
+.hero p{max-width:44ch;color:var(--mute);margin-top:28px}
+.msgs{display:flex;flex-direction:column;gap:26px}
+.msg{display:flex;flex-direction:column;gap:8px;max-width:330px}
+.msg:nth-child(2){align-self:flex-end}
+.msg:nth-child(3){margin-left:24px}
+.msg:nth-child(4){align-self:flex-end;margin-right:16px}
+.msg small{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.msg small i{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;color:var(--ink);background:var(--blush)}
+.msg:nth-child(even) small i{background:var(--sage)}
+.bubble{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:20px 20px 20px 6px;padding:14px 18px;font-size:15.5px;box-shadow:0 6px 20px rgba(31,42,36,.06)}
+
+/* Secciones */
+section{padding:96px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(38px,5vw,64px);line-height:1.02}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px}
+.head h2{max-width:16ch}
+.head p{max-width:40ch;color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.steps div{border-top:1px solid var(--ink);padding-top:18px}
+.steps h3{font-size:34px;margin-bottom:6px}
+.steps p{color:var(--mute);font-size:15.5px}
+.why{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.why li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.why li::before{content:"✓";flex:none;width:28px;height:28px;border-radius:50%;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-size:13px}
+.note-box{margin-top:56px;background:var(--blush);border-radius:24px;padding:44px;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center}
+.note-box h3{font-size:clamp(30px,3.4vw,44px);line-height:1.05}
+.note-box p{font-size:16px}
+
+/* Casos */
+.case-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:40px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.fact{border-top:1px solid var(--ink);padding-top:14px}
+.fact small{display:block;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.fact b{font-weight:500;font-size:17px}
+.lead{color:var(--mute);max-width:60ch;margin-bottom:28px}
+.lead b{color:var(--ink);font-weight:500}
+.legend{display:flex;gap:22px;font-size:14px;color:var(--mute);flex-wrap:wrap;margin-bottom:20px}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend i{width:14px;height:14px;border-radius:50%;display:inline-block}
+
+.charts{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.chart{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.chart.wide{grid-column:1/-1;background:var(--sage);border-color:transparent}
+.chart h3{font-size:28px}
+.plot{display:flex;align-items:flex-end;justify-content:center;gap:24px;height:180px;border-bottom:1px solid var(--ink)}
+.col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;height:100%;width:70px}
+.col .v{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
+.col .bar{width:100%;border-radius:999px 999px 0 0}
+.col.s .bar{background:var(--blush)} .col.o .bar{background:var(--ink)}
+.chart.wide .col.s .bar{background:var(--paper)}
+.months{display:flex;justify-content:center;gap:24px;font-size:14px;color:var(--mute)}
+.chart.wide .months{color:var(--ink)}
+.months span{width:70px;text-align:center}
+.chart p{font-size:15px;color:var(--mute)}
+.chart.wide p{color:var(--ink)}
+.chg{align-self:flex-start;border:1px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:500}
+.chg.neutral{border-color:var(--line);color:var(--mute)}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi.big{grid-column:1/-1;background:var(--sage);border-color:transparent;flex-direction:row;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:36px 40px}
+.kpi small{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.kpi.big small{color:var(--ink)}
+.kpi b{font:400 clamp(40px,4.4vw,56px)/1 var(--serif);font-variant-numeric:tabular-nums}
+.kpi.big b{font-size:clamp(72px,10vw,128px)}
+.kpi span{font-size:14.5px;color:var(--mute);line-height:1.4}
+.kpi.big span{color:var(--ink);max-width:30ch;font-size:16px}
+.kpi.big .lbl{display:flex;flex-direction:column;gap:8px}
+
+.callout{margin-top:20px;border:1px solid var(--line);border-radius:24px;padding:32px;display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:start}
+.callout b{font:400 clamp(26px,2.8vw,34px)/1.1 var(--serif)}
+.callout p{color:var(--mute);font-size:16px}
+
+.cta{background:var(--paper);border-radius:24px;padding:80px 40px;text-align:center}
+.cta h2{max-width:18ch;margin:0 auto 20px}
+.cta p{color:var(--mute)}
+footer{padding:32px 0 48px;color:var(--mute);font-size:14px;text-align:center}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:72px}
+  .msgs{max-width:460px;width:100%}
+  .head{flex-direction:column;align-items:flex-start;gap:20px}
+  .steps,.why{grid-template-columns:1fr}
+  .note-box,.callout{grid-template-columns:1fr;gap:16px;padding:32px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  section{padding:72px 0}
+}
+@media (max-width:560px){
+  .wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .facts{grid-template-columns:1fr;gap:14px}
+  .charts{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr 1fr;gap:12px}
+  .kpi{padding:20px}
+  .kpi.big{padding:28px}
+  .chart{padding:22px}
+  .cta{padding:56px 24px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span>Casos de éxito en Meta</span>
+</header>
+
+<!-- PORTADA -->
+<div class="hero">
+  <div>
+    <div class="tag">Publicidad en Facebook e Instagram</div>
+    <h1>Aumenta tus ventas con anuncios que te <em>llenan de mensajes</em></h1>
+    <p>Campañas de conversión a mensajes: clientes reales escribiéndote directo a tu WhatsApp o Messenger.</p>
+  </div>
+  <div class="msgs">
+    <div class="msg"><small><i>A</i>Mensaje a Arcoíris Ceremoniales</small><div class="bubble">Hola, ¿tienen vestidos de primera comunión? 👗</div></div>
+    <div class="msg"><small><i>V</i>Mensaje a Trámite de Visas</small><div class="bubble">¿Cuánto cuesta el trámite de la visa?</div></div>
+    <div class="msg"><small><i>M</i>Mensaje a MotoFiix</small><div class="bubble">Hola, quiero información para mi moto 🏍️</div></div>
+    <div class="msg"><small><i>S</i>Mensaje a San Palma Studio</small><div class="bubble">Vi su anuncio, ¿me dan informes? 🙌</div></div>
+  </div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section>
+  <div class="head">
+    <div>
+      <div class="tag">¿Cómo funciona?</div>
+      <h2>Una campaña de mensajes, <em>explicada fácil</em></h2>
+    </div>
+    <p>No es un anuncio para juntar "me gusta". Es un anuncio con un botón de "Enviar mensaje". Su único trabajo es que la gente te escriba.</p>
+  </div>
+  <div class="steps">
+    <div><h3>01</h3><p>La persona ve tu anuncio en Facebook o Instagram.</p></div>
+    <div><h3>02</h3><p>Toca "Enviar mensaje" y te escribe.</p></div>
+    <div><h3>03</h3><p>Tú le contestas, le muestras tus productos y vendes.</p></div>
+  </div>
+  <ul class="why">
+    <li>Solo lo ven las personas segmentadas para tu anuncio.</li>
+    <li>Sabes exactamente cuánto te costó cada cliente que escribió.</li>
+    <li>Tú pones el límite de gasto. Nunca se pasa.</li>
+  </ul>
+  <div class="note-box">
+    <h3>¿Por qué no veo el anuncio en mis redes?</h3>
+    <p>Los anuncios no se publican en el perfil ni en el feed de tu página, así que tus seguidores no los ven ahí. Aparecen directo en el inicio de Facebook e Instagram de las personas que elegimos para tu anuncio: por zona, edad e intereses. Por eso tu perfil se ve igual, pero los mensajes sí llegan.</p>
+  </div>
+</section>
+
+<!-- CASO 1 -->
+<section>
+  <div class="tag">Caso de éxito 1</div>
+  <h2 style="margin-bottom:40px">Arcoíris Ceremoniales</h2>
+  <div class="facts">
+    <div class="fact"><small>Qué vende</small><b>Todo para bautizos, primeras comuniones y bodas</b></div>
+    <div class="fact"><small>Inversión</small><b>$3,000 al mes</b></div>
+    <div class="fact"><small>Ubicación</small><b>Laredo, Tamaulipas</b></div>
+  </div>
+  <p class="lead">Empezamos en <b>septiembre 2026</b>. Así cambió del primer mes al segundo:</p>
+  <div class="legend"><span><i style="background:var(--blush)"></i>Septiembre (inicio)</span><span><i style="background:var(--ink)"></i>Octubre</span></div>
+
+  <div class="charts">
+    <div class="chart wide">
+      <h3>💬 Mensajes recibidos</h3>
+      <div class="plot">
+        <div class="col s"><span class="v">111</span><div class="bar" style="height:calc((100% - 30px) * 111 / 141)"></div></div>
+        <div class="col o"><span class="v">141</span><div class="bar" style="height:calc(100% - 30px)"></div></div>
+      </div>
+      <div class="months"><span>Sep</span><span>Oct</span></div>
+      <span class="chg">+30 clientes · +27%</span>
+      <p>Personas que le escribieron a la tienda para preguntar o comprar.</p>
+    </div>
+    <div class="chart">
+      <h3>💰 Costo por mensaje</h3>
+      <div class="plot">
+        <div class="col s"><span class="v">$26.46</span><div class="bar" style="height:calc(100% - 30px)"></div></div>
+        <div class="col o"><span class="v">$17.60</span><div class="bar" style="height:calc((100% - 30px) * 17.60 / 26.46)"></div></div>
+      </div>
+      <div class="months"><span>Sep</span><span>Oct</span></div>
+      <span class="chg">33% más barato</span>
+      <p>Lo que costó cada cliente. Entre más bajo, mejor.</p>
+    </div>
+    <div class="chart">
+      <h3>🧾 Dinero gastado</h3>
+      <div class="plot">
+        <div class="col s"><span class="v">$2,937</span><div class="bar" style="height:calc(100% - 30px)"></div></div>
+        <div class="col o"><span class="v">$2,482</span><div class="bar" style="height:calc((100% - 30px) * 2482 / 2937)"></div></div>
+      </div>
+      <div class="months"><span>Sep</span><span>Oct</span></div>
+      <span class="chg">$455 menos</span>
+      <p>Se gastó menos y llegaron más mensajes.</p>
+    </div>
+    <div class="chart">
+      <h3>👀 Personas que lo vieron</h3>
+      <div class="plot">
+        <div class="col s"><span class="v">36 mil</span><div class="bar" style="height:calc(100% - 30px)"></div></div>
+        <div class="col o"><span class="v">27 mil</span><div class="bar" style="height:calc((100% - 30px) * 27 / 36)"></div></div>
+      </div>
+      <div class="months"><span>Sep</span><span>Oct</span></div>
+      <span class="chg neutral">Alcance</span>
+      <p>Personas diferentes de Laredo que lo vieron.</p>
+    </div>
+    <div class="chart">
+      <h3>📣 Veces que apareció</h3>
+      <div class="plot">
+        <div class="col s"><span class="v">158 mil</span><div class="bar" style="height:calc(100% - 30px)"></div></div>
+        <div class="col o"><span class="v">134 mil</span><div class="bar" style="height:calc((100% - 30px) * 134392 / 157867)"></div></div>
+      </div>
+      <div class="months"><span>Sep</span><span>Oct</span></div>
+      <span class="chg neutral">Impresiones</span>
+      <p>Una persona lo puede ver varias veces, como un espectacular.</p>
+    </div>
+  </div>
+  <div class="callout">
+    <b>¿Por qué menos personas lo vieron, pero llegaron más mensajes?</b>
+    <p>Porque el anuncio aprendió a quién mostrarse: mamás, madrinas y novias que sí están organizando un evento. Menos gente mirando, pero más gente interesada de verdad.</p>
+  </div>
+</section>
+
+<!-- CASO 2 -->
+<section>
+  <div class="tag">Caso de éxito 2</div>
+  <h2 style="margin-bottom:40px">Trámite de Visas García</h2>
+  <div class="facts">
+    <div class="fact"><small>Qué ofrece</small><b>Asesoría y trámite de visas</b></div>
+    <div class="fact"><small>Inversión</small><b>$133 al día</b></div>
+    <div class="fact"><small>Ubicación</small><b>Monterrey, Nuevo León</b></div>
+  </div>
+  <p class="lead">Una sola campaña de mensajes, de <b>mayo a agosto 2026</b>. Esto logró en 4 meses:</p>
+  <div class="kpis">
+    <div class="kpi big"><div class="lbl"><small>💬 Mensajes recibidos</small><span>Personas que escribieron para preguntar por su trámite de visa.</span></div><b>444</b></div>
+    <div class="kpi"><small>💰 Costo por mensaje</small><b>$14.79</b><span>Lo que costó cada persona interesada.</span></div>
+    <div class="kpi"><small>🧾 Dinero gastado</small><b>$6,566</b><span>En total, en los 4 meses.</span></div>
+    <div class="kpi"><small>👀 Personas que lo vieron</small><b>68 mil</b><span>Personas diferentes de la zona.</span></div>
+    <div class="kpi"><small>📣 Veces que apareció</small><b>121 mil</b><span>Impresiones del anuncio.</span></div>
+  </div>
+  <div class="callout">
+    <b>Casi 4 clientes nuevos preguntando cada día</b>
+    <p>Con unos $53 diarios de gasto real, llegaron en promedio 3 a 4 mensajes al día de gente que quiere sacar su visa. Una sola persona que contrata el trámite paga de sobra lo que costaron varios mensajes.</p>
+  </div>
+</section>
+
+<!-- CASO 3 -->
+<section>
+  <div class="tag">Caso de éxito 3</div>
+  <h2 style="margin-bottom:40px">MotoFiix</h2>
+  <div class="facts">
+    <div class="fact"><small>Periodo</small><b>Julio 2025 – noviembre 2026</b></div>
+    <div class="fact"><small>Inversión</small><b>$144 al día</b></div>
+    <div class="fact"><small>Ubicación</small><b>Monterrey, Nuevo León</b></div>
+  </div>
+  <p class="lead">Empezamos con anuncios para conseguir clics y después cambiamos a una campaña de <b>mensajes directos a WhatsApp</b>. Esto ha logrado:</p>
+  <div class="kpis">
+    <div class="kpi big"><div class="lbl"><small>💬 Mensajes recibidos</small><span>Personas que escribieron por WhatsApp para preguntar o agendar.</span></div><b>1,176</b></div>
+    <div class="kpi"><small>💰 Costo por mensaje</small><b>$13.06</b><span>Lo que costó cada persona interesada.</span></div>
+    <div class="kpi"><small>🧾 Dinero gastado</small><b>$15,358</b><span>En la campaña de mensajes.</span></div>
+    <div class="kpi"><small>👀 Personas que lo vieron</small><b>91 mil</b><span>Personas diferentes de la zona.</span></div>
+    <div class="kpi"><small>📣 Veces que apareció</small><b>465 mil</b><span>Impresiones del anuncio.</span></div>
+  </div>
+  <div class="callout">
+    <b>De clics a conversaciones</b>
+    <p>Los primeros anuncios solo llevaban gente a un enlace: 387 clics, pero nadie escribiendo. Al cambiar a mensajes, la gente empezó a escribir directo al WhatsApp del negocio: más de mil conversaciones a $13 cada una.</p>
+  </div>
+</section>
+
+<!-- CASO 4 -->
+<section>
+  <div class="tag">Caso de éxito 4</div>
+  <h2 style="margin-bottom:40px">San Palma Studio</h2>
+  <div class="facts">
+    <div class="fact"><small>Periodo</small><b>Enero – noviembre 2026</b></div>
+    <div class="fact"><small>Inversión</small><b>≈ $6,000 al mes</b></div>
+    <div class="fact"><small>Ubicación</small><b>Monterrey, Nuevo León</b></div>
+  </div>
+  <p class="lead">Dos campañas de mensajes durante <b>2026</b>. Esto han logrado juntas:</p>
+  <div class="kpis">
+    <div class="kpi big"><div class="lbl"><small>💬 Mensajes recibidos</small><span>Personas que escribieron al estudio para preguntar o reservar.</span></div><b>4,776</b></div>
+    <div class="kpi"><small>💰 Costo por mensaje</small><b>$12.66</b><span>Promedio de las dos campañas.</span></div>
+    <div class="kpi"><small>✨ Clientes nuevos</small><b>4,078</b><span>Personas que escribían por primera vez.</span></div>
+    <div class="kpi"><small>👀 Personas que lo vieron</small><b>210 mil</b><span>Personas diferentes de la zona.</span></div>
+    <div class="kpi"><small>🧾 Dinero gastado</small><b>$60,477</b><span>En total, enero a noviembre.</span></div>
+  </div>
+  <div class="callout">
+    <b>4 de cada 5 mensajes, de gente nueva</b>
+    <p>El anuncio apareció más de 1.2 millones de veces y la mayoría de quienes escribieron no conocían el estudio. No solo le habla a los mismos seguidores: trae clientes que antes no llegaban.</p>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Tu negocio también puede recibir <em>más mensajes</em></h2>
+    <p>Escríbenos y te armamos un plan a tu medida.</p>
+  </div>
+</section>
+
+<footer>Datos reales del Administrador de anuncios de Meta. El alcance está redondeado.</footer>
+
+</div>
+</body>
+</html>
